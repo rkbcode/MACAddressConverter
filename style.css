@@ -1,9 +1,9 @@
 #main {
-    padding: 25px;
+    padding: 0 25px;
 }
 
 #input {
-    width: 250px;
+    width: 270px;
     height: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -19,7 +19,7 @@
 #title, .outputMac {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
-    max-width: 250px;
+    max-width: 350px;
 }
 
 .outputMac:hover {
