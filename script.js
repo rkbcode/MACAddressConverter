@@ -4,11 +4,13 @@ const dashes   = document.querySelector('#dashes')
 const colons   = document.querySelector('#colons')
 const cisco    = document.querySelector('#cisco')
 const copy     = document.querySelector('#copy')
+const clear    = document.querySelector('#clear')
 const outputs  = document.querySelectorAll('.outputMac')
 
 const regex    = /^^([0-9a-fA-F]{2}[:\-]?[0-9a-fA-F]{2}[:\-\.]?){2}[0-9a-fA-F]{2}[:\-]?[0-9a-fA-F]{2}$/
 
 input.addEventListener('input', showMacs)
+clear.addEventListener('click', clearInput)
 outputs.forEach(output => output.addEventListener('click', copyThis, false))
 
 function showMacs() {
@@ -44,4 +46,8 @@ function copyThis(event) {
         input.blur()
         copy.textContent = `Copied ${text}`
     }
+}
+
+function clearInput() {
+    input.value = ''
 }

@@ -9,6 +9,14 @@
     font-size: 18px;
 }
 
+#clear {
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 #copy {
     font-style: italic;
     font-weight: 100;
