@@ -50,4 +50,5 @@ function copyThis(event) {
 
 function clearInput() {
     input.value = ''
+    input.select()
 }
