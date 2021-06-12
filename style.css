@@ -52,6 +52,7 @@ body {
 .outputMac:hover {
     background-color: 454545;
     color: white;
+    background-color: #454545;
     cursor: pointer;
 }
 
