@@ -1,0 +1,14 @@
+{
+    "name": "Mac Address Converter",
+    "short_name": "MAC",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/icon-297x297.png",
+            "sizes": "297x297",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
