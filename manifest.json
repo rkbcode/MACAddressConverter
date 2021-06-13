@@ -1,6 +1,6 @@
 {
     "name": "Mac Address Converter",
-    "short_name": "MAC",
+    "short_name": "MAC Converter",
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#114068",
