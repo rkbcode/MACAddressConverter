@@ -38,20 +38,18 @@ body {
     max-width: 2.5em;
     border-radius: 15%;
     border: 0.1em solid #454545;
-    transition: all 0.1s ease-out;
+    transition: all 0.2s linear;
 }
 
 #clear:active {
     transform: rotate(-90deg);
+    transition: all 0s linear;
 }
 
 #clear:hover {
     cursor: pointer;
 }
 
-#clear::selection {
-    background: none;
-}
 
 #title {
     font-size: 2em;
