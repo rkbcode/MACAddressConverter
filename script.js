@@ -19,16 +19,19 @@ function showMacs() {
     
     if (inputValue.match(regex)) {
         const nothingFormat = inputValue.replace(/[:\-\.]/g, '')
-        const splitFormat = nothingFormat.match(/../g)
-        const dashesFormat = splitFormat.join('-')
-        const colonsFormat = splitFormat.join(':')
-        const ciscoFormat = nothingFormat.match(/..../g).join('.')
+        const splitFormat   = nothingFormat.match(/../g)
+        const dashesFormat  = splitFormat.join('-')
+        const colonsFormat  = splitFormat.join(':')
+        const ciscoFormat   = nothingFormat.match(/..../g).join('.')
         
         nothing.textContent = nothingFormat
         dashes.textContent  = dashesFormat
         colons.textContent  = colonsFormat
         cisco.textContent   = ciscoFormat
+        outputs.forEach(element => element.style.display = "block")
+
     } else {
+        outputs.forEach(element => element.style.display = "none")
         nothing.textContent = ''
         dashes.textContent  = ''
         colons.textContent  = ''
@@ -45,10 +48,14 @@ function copyThis(event) {
         document.execCommand('copy')
         input.blur()
         copy.textContent = `Copied ${text}`
+        copy.style.display = "block"
     }
 }
 
 function clearInput() {
     input.value = ''
     input.select()
+    outputs.forEach(element => element.style.display = "none")
+    copy.style.display = "none"
+    copy.textContent = null
 }

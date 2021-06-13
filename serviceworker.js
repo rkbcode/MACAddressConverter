@@ -1,7 +1,9 @@
+const cachePages = ['./index.html','./script.js','./style.css']
+
 self.addEventListener('install', function(event){
     event.waitUntil(
         caches.open('sw-cache').then(function(cache) {
-            return cache.addAll('./index.html','./script.js','./style.css');
+            return cache.addAll(cachePages);
         })
     );
 });
