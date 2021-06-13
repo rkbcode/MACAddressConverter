@@ -3,10 +3,12 @@
     "short_name": "MAC",
     "start_url": ".",
     "display": "standalone",
+    "theme_color": "#114068",
+    "background_color": "#114068",
     "icons": [
         {
-            "src": "./appIcons/icon-297x297.png",
-            "sizes": "297x297",
+            "src": "./appIcons/icon-624x624.png",
+            "sizes": "624x624",
             "type": "image/png",
             "purpose": "any maskable"
         }
