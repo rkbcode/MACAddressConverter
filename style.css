@@ -2,61 +2,81 @@ body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     color: #454545;
     border-color: #454545;
+    font-size: 1em;
 }
 
 #main {
-    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 2.5em;
+}
+#outputContainer {
+    max-width: fit-content;
 }
 
 #input {
-    width: 270px;
-    height: 30px;
-    font-size: 18px;
-    border: #454545 1px solid;
-    border-radius: 5px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 0;
+    margin-right: 10px;
+    font-size: 1em;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+#clear {
+    flex-shrink: 0;
+    max-width: 2.5em;
+    border-radius: 15%;
+    border: 0.1em solid #454545;
+    transition: all 0.1s ease-out;
 }
 
-#clear {
-    height: 30px;
-    font-size: 18px;
-    margin-left: 10px;
-    cursor: pointer;
-    background-color: white;
-    border: #454545 1px solid;
-    border-radius: 5px;
+#clear:active {
+    transform: rotate(-90deg);
 }
 
 #clear:hover {
-    background-color: #454545;
-    color: white;
+    cursor: pointer;
+}
+
+#clear::selection {
+    background: none;
+}
+
+#title {
+    font-size: 2em;
+    margin: 0.2em 0;
 }
 
 #copy {
     font-style: italic;
-    font-weight: 100;
-    font-size: 25px;
-}
-
-#title, .outputMac {
-    font-size: 25px;
-    max-width: 350px;
-    border-radius: 5px;
-    padding: 5px 15px;
-}
-
-#title {
-    padding-left: 0;
-    font-weight: bold;
 }
 
 .outputMac {
     display:none;
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
+    margin: 0.1em;
 }
 
 .outputMac:hover {
-    background-color: 454545;
     color: white;
     background-color: #454545;
     cursor: pointer;
 }
 
+@media screen and (min-width: 800px) {
+    #main {
+        max-width: 640px;
+    }
+}
