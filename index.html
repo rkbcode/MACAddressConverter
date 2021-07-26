@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/styles.css">
     <title>MAC Address Converter</title>
     <meta name="description" content="Mac Address Converter">
     <meta name="theme-color" content="#114068">
@@ -15,22 +15,34 @@
         }
     </script>
 </head>
-<body>
-    <div id="main">
-        <p id="title">MAC Address</p>
-        <div id="inputContainer">
-            <input type="text" name="" id="input">
-            <svg width=100% height=100% viewBox="0 0 100 100" id="clear">
-                <text  font-size="28" fill="#454545" x=50% y=50% dominant-baseline="middle" text-anchor="middle">CLEAR</text>
+<body class="bg-gray-500">
+    <div id="main" class="md:max-w-3xl md:mx-auto text-gray-600 text-xl m-5 md:mt-10 p-5 grid grid-rows-6 bg-gray-300 rounded-md shadow-inner">
+        <p id="title" class="uppercase text-5xl font-semibold mb-5 row-span-1 self-center">MAC Address</p>
+        <div id="inputContainer" class="text-center font-mono text-xl grid grid-cols-5 row-span-1 relative">
+            <p id="copy" class="absolute -top-1 text-base"></p>
+            <input type="text" name="" id="input" class="bg-gray-400 text-gray-100 w-full h-10 px-3 col-span-4 self-center rounded-lg focus:outline-none shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" id="clear" class="w-10 cols-span-1 self-center mx-3 cursor-pointer transition duration-100 ease-linear transform hover:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z" />
             </svg>
         </div>
-        <div id="outputContainer">
-            <p id="nothing" class="outputMac"></p>
-            <p id="dashes" class="outputMac"></p>
-            <p id="colons" class="outputMac"></p>
-            <p id="cisco" class="outputMac"></p>
+        <div id="outputContainer" class="row-span-4">
+            <div class="outputcard bg-gray-100 w-full h-20 p-2 rounded-lg mb-5 shadow-md hover:bg-gray-600 hover:text-gray-100 cursor-pointer">
+                <p class="text-base">No Format</p>
+                <p id="nothing" class="outputMac text-2xl font-semibold font-mono mt-1"></p>
+            </div>
+            <div class="outputcard bg-gray-100 w-full h-20 p-2 rounded-lg mb-5 shadow-md hover:bg-gray-600 hover:text-gray-100 cursor-pointer">
+                <p class="text-base">Dashes</p>
+                <p id="dashes" class="outputMac text-2xl font-semibold font-mono mt-1"></p>
+            </div>
+            <div class="outputcard bg-gray-100 w-full h-20 p-2 rounded-lg mb-5 shadow-md hover:bg-gray-600 hover:text-gray-100 cursor-pointer">
+                <p class="text-base">Colons</p>
+                <p id="colons" class="outputMac text-2xl font-semibold font-mono mt-1"></p>
+            </div>
+            <div class="outputcard bg-gray-100 w-full h-20 p-2 rounded-lg mb-5 shadow-md hover:bg-gray-600 hover:text-gray-100 cursor-pointer">
+                <p class="text-base">Cisco</p>
+                <p id="cisco" class="outputMac text-2xl font-semibold font-mono mt-1"></p>
+            </div>           
         </div>
-        <p id="copy"></p>
     </div>
     <script src="script.js"></script>
 </body>

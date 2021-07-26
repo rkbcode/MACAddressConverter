@@ -6,12 +6,13 @@ const cisco    = document.querySelector('#cisco')
 const copy     = document.querySelector('#copy')
 const clear    = document.querySelector('#clear')
 const outputs  = document.querySelectorAll('.outputMac')
+const cards    = document.querySelectorAll('.outputcard')
 
 const regex    = /^^([0-9a-fA-F]{2}[:\-]?[0-9a-fA-F]{2}[:\-\.]?){2}[0-9a-fA-F]{2}[:\-]?[0-9a-fA-F]{2}$/
 
 input.addEventListener('input', showMacs)
 clear.addEventListener('click', clearInput)
-outputs.forEach(output => output.addEventListener('click', copyThis, false))
+cards.forEach(output => output.addEventListener('click', copyThis, false))
 
 function showMacs() {
     input.value = input.value.trim()
@@ -41,7 +42,8 @@ function showMacs() {
 }
 
 function copyThis(event) {
-    const text = event.target.textContent
+    const text = event.currentTarget.children[1].textContent
+    console.log(text);
     if (text != '') {
         input.value = text
         input.select()

@@ -1,4 +1,4 @@
-const cachePages = ['./index.html','./script.js','./style.css']
+const cachePages = ['./index.html','./script.js','./public/style.css']
 
 self.addEventListener('install', function(event){
     event.waitUntil(

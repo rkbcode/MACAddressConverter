@@ -1,0 +1,23 @@
+{
+  "name": "macaddressconverter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waterswim/MACAddressConverter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waterswim/MACAddressConverter/issues"
+  },
+  "homepage": "https://github.com/waterswim/MACAddressConverter#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  }
+}
