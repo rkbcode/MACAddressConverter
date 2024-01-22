@@ -2,6 +2,7 @@ const input    = document.querySelector('#input')
 const nothing  = document.querySelector('#nothing')
 const dashes   = document.querySelector('#dashes')
 const colons   = document.querySelector('#colons')
+const aruba    = document.querySelector('#aruba')
 const cisco    = document.querySelector('#cisco')
 const copy     = document.querySelector('#copy')
 const clear    = document.querySelector('#clear')
@@ -23,11 +24,13 @@ function showMacs() {
         const splitFormat   = nothingFormat.match(/../g)
         const dashesFormat  = splitFormat.join('-')
         const colonsFormat  = splitFormat.join(':')
+        const arubaFormat   = nothingFormat.match(/....../g).join('-')
         const ciscoFormat   = nothingFormat.match(/..../g).join('.')
         
         nothing.textContent = nothingFormat
         dashes.textContent  = dashesFormat
         colons.textContent  = colonsFormat
+        aruba.textContent   = arubaFormat
         cisco.textContent   = ciscoFormat
         outputs.forEach(element => element.style.display = "block")
 
@@ -36,6 +39,7 @@ function showMacs() {
         nothing.textContent = ''
         dashes.textContent  = ''
         colons.textContent  = ''
+        aruba.textContent   = ''
         cisco.textContent   = ''
         copy.textContent    = ''
     }
